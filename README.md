@@ -18,11 +18,14 @@ Seven release gates were set before any scoring. Four are hard gates: no invente
 Reviews are synthetic and seeded, so every sentence carries a known label for aspect, polarity and safety type. Candidate A summaries were written by Claude in a chat session following prompt v1, in one pass before any grading ran. See Provenance below for limits on these numbers.
 
 ## Run it
+On Windows, use `py` instead of `python3`.
 
     python3 generate_data.py   # builds data/reviews.json and data/golden_set.json (seeded)
     python3 run_eval.py        # runs baseline, Candidate A, Candidate B; writes results/results.json
 
 Python 3 standard library only. No API keys needed.
+
+Expected: Candidate A catches 5/10 safety complaints; Candidate B catches 6/10 with 2 false alarms. Both fail the hard gates.
 
 ## Files
 
