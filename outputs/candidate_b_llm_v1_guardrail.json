@@ -1,0 +1,413 @@
+[
+ {
+  "business_id": "B01",
+  "summary": "Customers consistently praise the food, especially the al pastor tacos and salsa bar. Wait times are a common complaint, with several reviewers reporting long lines, though others were seated quickly. Opinions on price and cleanliness are mixed. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "Customers consistently praise the food",
+    "aspect": "food",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Wait times are a common complaint",
+    "aspect": "wait",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "others were seated quickly",
+    "aspect": "wait",
+    "polarity": "+",
+    "quant": "some"
+   },
+   {
+    "text": "Opinions on price are mixed",
+    "aspect": "price",
+    "polarity": "mixed",
+    "quant": "mixed"
+   },
+   {
+    "text": "Opinions on cleanliness are mixed",
+    "aspect": "cleanliness",
+    "polarity": "mixed",
+    "quant": "mixed"
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B01-R04"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B02",
+  "summary": "Reviewers describe the mechanics as honest and transparent, without upselling. The most frequent complaint is slow turnaround, with jobs taking days longer than quoted. Pricing gets mixed reviews. One customer reported their wheel came loose after a tire rotation. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "mechanics are honest and transparent, without upselling",
+    "aspect": "honesty",
+    "polarity": "+",
+    "quant": "many"
+   },
+   {
+    "text": "most frequent complaint is slow turnaround",
+    "aspect": "turnaround",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "jobs taking days longer than quoted",
+    "aspect": "turnaround",
+    "polarity": "-",
+    "quant": "many",
+    "human_check": "embellished",
+    "human_note": "No review mentions a quote for turnaround time; reviews say 'nearly a week' and 'never called'. Detail invented."
+   },
+   {
+    "text": "Pricing gets mixed reviews",
+    "aspect": "price",
+    "polarity": "mixed",
+    "quant": "mixed"
+   },
+   {
+    "text": "wheel came loose after a tire rotation",
+    "aspect": "work_safety",
+    "polarity": "-",
+    "quant": "one",
+    "safety_type": "vehicle_safety",
+    "evidence": [
+     "B02-R01"
+    ]
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B02-R01"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B03",
+  "summary": "Members like the large selection of free weights and racks, but many complain about dirty locker rooms and equipment, and the gym gets very crowded in the evenings. One member was injured when a cable machine snapped. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "Members like the large selection of free weights and racks",
+    "aspect": "equipment",
+    "polarity": "+",
+    "quant": "many"
+   },
+   {
+    "text": "many complain about dirty locker rooms and equipment",
+    "aspect": "cleanliness",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "the gym gets very crowded in the evenings",
+    "aspect": "crowding",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "One member was injured when a cable machine snapped",
+    "aspect": "equipment",
+    "polarity": "-",
+    "quant": "one",
+    "safety_type": "physical_injury",
+    "evidence": [
+     "B03-R10"
+    ]
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B03-R10"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B04",
+  "summary": "Parents overwhelmingly praise the warm, caring teachers. Common complaints are rising tuition and inconsistent communication from the director and parent app.",
+  "claims": [
+   {
+    "text": "Parents overwhelmingly praise the warm, caring teachers",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Common complaints are rising tuition",
+    "aspect": "price",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "inconsistent communication from the director and parent app",
+    "aspect": "communication",
+    "polarity": "-",
+    "quant": "many"
+   }
+  ]
+ },
+ {
+  "business_id": "B05",
+  "summary": "Clients rave about the stylists' skill and the friendly staff. Booking is the main frustration: double-booked slots, long waits for appointments, and a crashing booking site, though some find online booking easy. Prices are generally considered fair.",
+  "claims": [
+   {
+    "text": "Clients rave about the stylists' skill",
+    "aspect": "skill",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Clients rave about the friendly staff",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Booking is the main frustration",
+    "aspect": "booking",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "some find online booking easy",
+    "aspect": "booking",
+    "polarity": "+",
+    "quant": "some"
+   },
+   {
+    "text": "Prices are generally considered fair",
+    "aspect": "price",
+    "polarity": "+",
+    "quant": "majority_of_mentions"
+   }
+  ]
+ },
+ {
+  "business_id": "B06",
+  "summary": "Guests love the location, within walking distance of the Stockyards and downtown, and praise the friendly front desk. Room cleanliness is the dominant complaint, including skipped housekeeping, dirty rooms, and two reports of bed bugs. Safety note: 2 reviews mention a possible safety concern.",
+  "claims": [
+   {
+    "text": "Guests love the location",
+    "aspect": "location",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "praise the friendly front desk",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "many"
+   },
+   {
+    "text": "Room cleanliness is the dominant complaint",
+    "aspect": "room_clean",
+    "polarity": "-",
+    "quant": "most"
+   },
+   {
+    "text": "two reports of bed bugs",
+    "aspect": "room_clean",
+    "polarity": "-",
+    "quant": "two",
+    "safety_type": "pest_infestation",
+    "evidence": [
+     "B06-R06",
+     "B06-R10"
+    ]
+   },
+   {
+    "text": "Safety note: 2 reviews mention a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B06-R06",
+     "B06-R10"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B07",
+  "summary": "Customers love the coffee, especially the in-house roasting and oat lattes, and the reliable wifi makes it a popular work spot. The main drawback is limited, cramped seating. A few find it pricey.",
+  "claims": [
+   {
+    "text": "Customers love the coffee",
+    "aspect": "coffee",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "the reliable wifi makes it a popular work spot",
+    "aspect": "wifi",
+    "polarity": "+",
+    "quant": "many"
+   },
+   {
+    "text": "The main drawback is limited, cramped seating",
+    "aspect": "seating",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "A few find it pricey",
+    "aspect": "price",
+    "polarity": "-",
+    "quant": "some"
+   }
+  ]
+ },
+ {
+  "business_id": "B08",
+  "summary": "Most customers say technicians arrive on time and do quality work that holds up, though several reported late arrivals and a few saw leaks return. Pricing complaints are common. One customer reported a gas leak at the company's fitting after a water heater install. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "Most customers say technicians arrive on time",
+    "aspect": "punctuality",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Most customers say they do quality work that holds up",
+    "aspect": "quality",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "several reported late arrivals",
+    "aspect": "punctuality",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "a few saw leaks return",
+    "aspect": "quality",
+    "polarity": "-",
+    "quant": "some",
+    "human_check": "overstated",
+    "human_note": "Only one review (B08-R06) reports a returning leak; the other negative-quality review is the gas leak, a different issue."
+   },
+   {
+    "text": "Pricing complaints are common",
+    "aspect": "price",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "gas leak at the company's fitting after a water heater install",
+    "aspect": "quality",
+    "polarity": "-",
+    "quant": "one",
+    "safety_type": "gas_leak",
+    "evidence": [
+     "B08-R01"
+    ]
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B08-R01"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B09",
+  "summary": "Owners consistently praise the gentle, friendly groomers who know every dog by name. Complaints center on dogs not being ready at pickup time and occasional rude front desk interactions. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "Owners consistently praise the gentle, friendly groomers",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Complaints center on dogs not being ready at pickup time",
+    "aspect": "wait",
+    "polarity": "-",
+    "quant": "many"
+   },
+   {
+    "text": "occasional rude front desk interactions",
+    "aspect": "staff",
+    "polarity": "-",
+    "quant": "some"
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B09-R03"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ },
+ {
+  "business_id": "B10",
+  "summary": "Diners highlight the food, especially the orange chicken and hot and sour soup, and the generous portions. Delivery is inconsistent: some orders arrive hot and early, others late, cold, or missing items. Lunch specials are seen as good value. Safety note: 1 review mentions a possible safety concern.",
+  "claims": [
+   {
+    "text": "Diners highlight the food",
+    "aspect": "food",
+    "polarity": "+",
+    "quant": "most"
+   },
+   {
+    "text": "Delivery is inconsistent",
+    "aspect": "delivery",
+    "polarity": "mixed",
+    "quant": "mixed"
+   },
+   {
+    "text": "Lunch specials are seen as good value",
+    "aspect": "price",
+    "polarity": "+",
+    "quant": "majority_of_mentions"
+   },
+   {
+    "text": "Safety note: 1 review mentions a possible safety concern.",
+    "aspect": "safety_flag",
+    "polarity": "-",
+    "quant": "flag",
+    "safety_type": "flag",
+    "evidence": [
+     "B10-R06"
+    ],
+    "source": "guardrail"
+   }
+  ]
+ }
+]

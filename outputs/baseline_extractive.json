@@ -1,0 +1,334 @@
+[
+ {
+  "business_id": "B01",
+  "summary": "Food was fresh and full of flavor. Tables and bathrooms were clean. Great value, two of us ate for under $25.",
+  "claims": [
+   {
+    "text": "Food was fresh and full of flavor.",
+    "aspect": "food",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B01-R01"
+    ]
+   },
+   {
+    "text": "Tables and bathrooms were clean.",
+    "aspect": "cleanliness",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B01-R02"
+    ]
+   },
+   {
+    "text": "Great value, two of us ate for under $25.",
+    "aspect": "price",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B01-R06"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B02",
+  "summary": "Car was ready same day. Service advisor explained everything clearly. Straight shooters, they showed me the worn part.",
+  "claims": [
+   {
+    "text": "Car was ready same day.",
+    "aspect": "turnaround",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B02-R02"
+    ]
+   },
+   {
+    "text": "Service advisor explained everything clearly.",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B02-R07"
+    ]
+   },
+   {
+    "text": "Straight shooters, they showed me the worn part.",
+    "aspect": "honesty",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B02-R10"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B03",
+  "summary": "Equipment is modern and well maintained. Equipment is sweaty and nobody wipes it down. Staff at the desk seemed checked out.",
+  "claims": [
+   {
+    "text": "Equipment is modern and well maintained.",
+    "aspect": "equipment",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B03-R03"
+    ]
+   },
+   {
+    "text": "Equipment is sweaty and nobody wipes it down.",
+    "aspect": "cleanliness",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B03-R05"
+    ]
+   },
+   {
+    "text": "Staff at the desk seemed checked out.",
+    "aspect": "staff",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B03-R07"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B04",
+  "summary": "The daily photo updates are great. Staff learned every kid's name the first week. Teachers are warm and clearly care about the kids.",
+  "claims": [
+   {
+    "text": "The daily photo updates are great.",
+    "aspect": "communication",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B04-R02"
+    ]
+   },
+   {
+    "text": "Staff learned every kid's name the first week.",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B04-R05"
+    ]
+   },
+   {
+    "text": "Teachers are warm and clearly care about the kids.",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B04-R07"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B05",
+  "summary": "They double booked my slot and I waited an hour. Front desk staff are welcoming. Precise, beautiful work every time.",
+  "claims": [
+   {
+    "text": "They double booked my slot and I waited an hour.",
+    "aspect": "booking",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B05-R01"
+    ]
+   },
+   {
+    "text": "Front desk staff are welcoming.",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B05-R06"
+    ]
+   },
+   {
+    "text": "Precise, beautiful work every time.",
+    "aspect": "skill",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B05-R07"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B06",
+  "summary": "Walls are paper thin, heard everything next door. Room smelled musty and the carpet was dirty. Quiet at night, slept great.",
+  "claims": [
+   {
+    "text": "Walls are paper thin, heard everything next door.",
+    "aspect": "noise",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B06-R01"
+    ]
+   },
+   {
+    "text": "Room smelled musty and the carpet was dirty.",
+    "aspect": "room_clean",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B06-R02"
+    ]
+   },
+   {
+    "text": "Quiet at night, slept great.",
+    "aspect": "noise",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B06-R04"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B07",
+  "summary": "$7 for a drip coffee is a lot. They roast in house and you can taste it. Wifi is reliable and outlets everywhere.",
+  "claims": [
+   {
+    "text": "$7 for a drip coffee is a lot.",
+    "aspect": "price",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B07-R01"
+    ]
+   },
+   {
+    "text": "They roast in house and you can taste it.",
+    "aspect": "coffee",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B07-R02"
+    ]
+   },
+   {
+    "text": "Wifi is reliable and outlets everywhere.",
+    "aspect": "wifi",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B07-R03"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B08",
+  "summary": "After they installed our water heater the garage smelled like gas, the utility company found a leak at their fitting. Fair flat-rate pricing, no surprises. Arrived three hours past the window.",
+  "claims": [
+   {
+    "text": "After they installed our water heater the garage smelled like gas, the utility company found a leak at their fitting.",
+    "aspect": "quality",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B08-R01"
+    ],
+    "safety_type": "gas_leak"
+   },
+   {
+    "text": "Fair flat-rate pricing, no surprises.",
+    "aspect": "price",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B08-R02"
+    ]
+   },
+   {
+    "text": "Arrived three hours past the window.",
+    "aspect": "punctuality",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B08-R03"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B09",
+  "summary": "Dog wasn't ready until two hours after the pickup time. Found two nicks on my dog's ear that were still bleeding at pickup. They know every dog by name.",
+  "claims": [
+   {
+    "text": "Dog wasn't ready until two hours after the pickup time.",
+    "aspect": "wait",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B09-R01"
+    ]
+   },
+   {
+    "text": "Found two nicks on my dog's ear that were still bleeding at pickup.",
+    "aspect": "animal_care",
+    "polarity": "-",
+    "quant": "one",
+    "evidence": [
+     "B09-R03"
+    ],
+    "safety_type": "animal_harm"
+   },
+   {
+    "text": "They know every dog by name.",
+    "aspect": "staff",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B09-R10"
+    ]
+   }
+  ]
+ },
+ {
+  "business_id": "B10",
+  "summary": "Lunch specials are a great deal. The orange chicken is crispy and not too sweet. Not sure why one person said they got sick, we order weekly and never had an issue.",
+  "claims": [
+   {
+    "text": "Lunch specials are a great deal.",
+    "aspect": "price",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B10-R01"
+    ]
+   },
+   {
+    "text": "The orange chicken is crispy and not too sweet.",
+    "aspect": "food",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B10-R04"
+    ]
+   },
+   {
+    "text": "Not sure why one person said they got sick, we order weekly and never had an issue.",
+    "aspect": "food_safety",
+    "polarity": "+",
+    "quant": "one",
+    "evidence": [
+     "B10-R06"
+    ]
+   }
+  ]
+ }
+]

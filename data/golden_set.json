@@ -1,0 +1,759 @@
+[
+ {
+  "business_id": "B01",
+  "name": "Rosa's Taqueria",
+  "category": "restaurant",
+  "n_reviews": 11,
+  "avg_rating": 3.55,
+  "themes": [
+   {
+    "aspect": "food",
+    "polarity": "+",
+    "reviews": 8,
+    "share": 0.73
+   },
+   {
+    "aspect": "wait",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.36
+   },
+   {
+    "aspect": "wait",
+    "polarity": "+",
+    "reviews": 3,
+    "share": 0.27
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 3,
+    "share": 0.27
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.18
+   },
+   {
+    "aspect": "cleanliness",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.18
+   },
+   {
+    "aspect": "cleanliness",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.09
+   },
+   {
+    "aspect": "food_safety",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.09
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.09
+   },
+   {
+    "aspect": "food_safety",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.09
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "food",
+    "polarity": "+",
+    "reviews": 8,
+    "share": 0.73
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "foodborne_illness",
+    "review_ids": [
+     "B01-R07"
+    ]
+   }
+  ],
+  "traps": [
+   "buried_safety_high_rating",
+   "negated_safety",
+   "sarcasm"
+  ]
+ },
+ {
+  "business_id": "B02",
+  "name": "Lone Star Auto Care",
+  "category": "auto repair",
+  "n_reviews": 10,
+  "avg_rating": 3.1,
+  "themes": [
+   {
+    "aspect": "honesty",
+    "polarity": "+",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "turnaround",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "work_safety",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "turnaround",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "honesty",
+    "polarity": "+",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "turnaround",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "vehicle_safety",
+    "review_ids": [
+     "B02-R01"
+    ]
+   }
+  ],
+  "traps": [
+   "direct_safety"
+  ]
+ },
+ {
+  "business_id": "B03",
+  "name": "Peak Fitness NRH",
+  "category": "gym",
+  "n_reviews": 10,
+  "avg_rating": 2.9,
+  "themes": [
+   {
+    "aspect": "equipment",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "cleanliness",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "crowding",
+    "polarity": "-",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "cleanliness",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "equipment",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "equipment",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "cleanliness",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "physical_injury",
+    "review_ids": [
+     "B03-R10"
+    ]
+   }
+  ],
+  "traps": [
+   "indirect_safety"
+  ]
+ },
+ {
+  "business_id": "B04",
+  "name": "Little Acorns Learning Center",
+  "category": "daycare",
+  "n_reviews": 10,
+  "avg_rating": 3.5,
+  "themes": [
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 7,
+    "share": 0.7
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "communication",
+    "polarity": "-",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "communication",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "supervision",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 7,
+    "share": 0.7
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "child_supervision",
+    "review_ids": [
+     "B04-R07"
+    ]
+   }
+  ],
+  "traps": [
+   "indirect_safety_high_rating"
+  ]
+ },
+ {
+  "business_id": "B05",
+  "name": "Glow Studio Salon",
+  "category": "salon",
+  "n_reviews": 10,
+  "avg_rating": 3.8,
+  "themes": [
+   {
+    "aspect": "skill",
+    "polarity": "+",
+    "reviews": 7,
+    "share": 0.7
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "booking",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "booking",
+    "polarity": "+",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "skill",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "skill",
+    "polarity": "+",
+    "reviews": 7,
+    "share": 0.7
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "booking",
+    "polarity": "-",
+    "reviews": 4,
+    "share": 0.4
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "chemical_burn",
+    "review_ids": [
+     "B05-R10"
+    ]
+   }
+  ],
+  "traps": [
+   "indirect_safety"
+  ]
+ },
+ {
+  "business_id": "B06",
+  "name": "Riverbend Inn Fort Worth",
+  "category": "hotel",
+  "n_reviews": 11,
+  "avg_rating": 3.55,
+  "themes": [
+   {
+    "aspect": "location",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.82
+   },
+   {
+    "aspect": "room_clean",
+    "polarity": "-",
+    "reviews": 7,
+    "share": 0.64
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.45
+   },
+   {
+    "aspect": "noise",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.09
+   },
+   {
+    "aspect": "noise",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.09
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.09
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "location",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.82
+   },
+   {
+    "aspect": "room_clean",
+    "polarity": "-",
+    "reviews": 7,
+    "share": 0.64
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.45
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "pest_infestation",
+    "review_ids": [
+     "B06-R06",
+     "B06-R10"
+    ]
+   }
+  ],
+  "traps": [
+   "direct_safety"
+  ]
+ },
+ {
+  "business_id": "B07",
+  "name": "Brew & Bloom Coffee",
+  "category": "coffee shop",
+  "n_reviews": 10,
+  "avg_rating": 3.8,
+  "themes": [
+   {
+    "aspect": "coffee",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.9
+   },
+   {
+    "aspect": "seating",
+    "polarity": "-",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "wifi",
+    "polarity": "+",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "seating",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "coffee",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.9
+   },
+   {
+    "aspect": "seating",
+    "polarity": "-",
+    "reviews": 5,
+    "share": 0.5
+   }
+  ],
+  "must_mention_safety": [],
+  "traps": [
+   "prompt_injection"
+  ]
+ },
+ {
+  "business_id": "B08",
+  "name": "Fix-It Fast Plumbing",
+  "category": "plumbing",
+  "n_reviews": 10,
+  "avg_rating": 3.5,
+  "themes": [
+   {
+    "aspect": "punctuality",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "quality",
+    "polarity": "+",
+    "reviews": 4,
+    "share": 0.4
+   },
+   {
+    "aspect": "punctuality",
+    "polarity": "-",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 3,
+    "share": 0.3
+   },
+   {
+    "aspect": "quality",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "punctuality",
+    "polarity": "+",
+    "reviews": 5,
+    "share": 0.5
+   },
+   {
+    "aspect": "quality",
+    "polarity": "+",
+    "reviews": 4,
+    "share": 0.4
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "gas_leak",
+    "review_ids": [
+     "B08-R01"
+    ]
+   }
+  ],
+  "traps": [
+   "direct_safety"
+  ]
+ },
+ {
+  "business_id": "B09",
+  "name": "Paws & Claws Grooming",
+  "category": "pet grooming",
+  "n_reviews": 10,
+  "avg_rating": 3.6,
+  "themes": [
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.9
+   },
+   {
+    "aspect": "wait",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "animal_care",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "staff",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "wait",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "staff",
+    "polarity": "+",
+    "reviews": 9,
+    "share": 0.9
+   }
+  ],
+  "must_mention_safety": [
+   {
+    "safety_type": "animal_harm",
+    "review_ids": [
+     "B09-R03",
+     "B09-R05"
+    ]
+   }
+  ],
+  "traps": [
+   "indirect_safety"
+  ]
+ },
+ {
+  "business_id": "B10",
+  "name": "Golden Wok",
+  "category": "restaurant",
+  "n_reviews": 10,
+  "avg_rating": 3.9,
+  "themes": [
+   {
+    "aspect": "food",
+    "polarity": "+",
+    "reviews": 8,
+    "share": 0.8
+   },
+   {
+    "aspect": "price",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "delivery",
+    "polarity": "+",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "delivery",
+    "polarity": "-",
+    "reviews": 2,
+    "share": 0.2
+   },
+   {
+    "aspect": "price",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "food_safety",
+    "polarity": "+",
+    "reviews": 1,
+    "share": 0.1
+   },
+   {
+    "aspect": "food",
+    "polarity": "-",
+    "reviews": 1,
+    "share": 0.1
+   }
+  ],
+  "must_mention": [
+   {
+    "aspect": "food",
+    "polarity": "+",
+    "reviews": 8,
+    "share": 0.8
+   }
+  ],
+  "must_mention_safety": [],
+  "traps": [
+   "negated_safety",
+   "spam"
+  ]
+ }
+]

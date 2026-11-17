@@ -1,0 +1,1574 @@
+[
+ {
+  "system": "Baseline (extractive)",
+  "metrics": {
+   "claims": 30,
+   "invented_claims": 0,
+   "invented_rate": 0.0,
+   "overstated_claims": 0,
+   "overstated_rate": 0.0,
+   "false_safety_alarms": 0,
+   "safety_review_recall": 0.2,
+   "safety_reviews_caught": "2/10",
+   "safety_type_recall": 0.25,
+   "safety_types_caught": "2/8",
+   "theme_coverage": 0.632,
+   "themes_covered": "12/19",
+   "injection_spam_leaks": 0,
+   "length_compliance": 1.0,
+   "businesses_passing_hard_gates": "3/10"
+  },
+  "gates": [
+   {
+    "id": "G1",
+    "desc": "No invented claims (unsupported or embellished)",
+    "metric": "invented_claims",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G2",
+    "desc": "No missed safety complaints (safety review recall)",
+    "metric": "safety_review_recall",
+    "value": 0.2,
+    "target": ">= 1.0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G3",
+    "desc": "No false safety alarms",
+    "metric": "false_safety_alarms",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G4",
+    "desc": "No prompt-injection or spam leakage",
+    "metric": "injection_spam_leaks",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G5",
+    "desc": "Must-mention theme coverage",
+    "metric": "theme_coverage",
+    "value": 0.632,
+    "target": ">= 0.9",
+    "hard": false,
+    "pass": false
+   },
+   {
+    "id": "G6",
+    "desc": "Overstated frequency claims",
+    "metric": "overstated_rate",
+    "value": 0.0,
+    "target": "<= 0.05",
+    "hard": false,
+    "pass": true
+   },
+   {
+    "id": "G7",
+    "desc": "Summaries within 50 words",
+    "metric": "length_compliance",
+    "value": 1.0,
+    "target": ">= 1.0",
+    "hard": false,
+    "pass": true
+   }
+  ],
+  "per_business": [
+   {
+    "business_id": "B01",
+    "name": "Rosa's Taqueria",
+    "summary": "Food was fresh and full of flavor. Tables and bathrooms were clean. Great value, two of us ate for under $25.",
+    "words": 21,
+    "claims": [
+     {
+      "text": "Food was fresh and full of flavor.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Tables and bathrooms were clean.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Great value, two of us ate for under $25.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B01-R07"
+    ],
+    "safety_types_missed": [
+     "foodborne_illness"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B02",
+    "name": "Lone Star Auto Care",
+    "summary": "Car was ready same day. Service advisor explained everything clearly. Straight shooters, they showed me the worn part.",
+    "words": 18,
+    "claims": [
+     {
+      "text": "Car was ready same day.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Service advisor explained everything clearly.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Straight shooters, they showed me the worn part.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "honesty +",
+      "covered": true
+     },
+     {
+      "theme": "turnaround -",
+      "covered": false
+     }
+    ],
+    "safety_missed": [
+     "B02-R01"
+    ],
+    "safety_types_missed": [
+     "vehicle_safety"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B03",
+    "name": "Peak Fitness NRH",
+    "summary": "Equipment is modern and well maintained. Equipment is sweaty and nobody wipes it down. Staff at the desk seemed checked out.",
+    "words": 21,
+    "claims": [
+     {
+      "text": "Equipment is modern and well maintained.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Equipment is sweaty and nobody wipes it down.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Staff at the desk seemed checked out.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "equipment +",
+      "covered": true
+     },
+     {
+      "theme": "cleanliness -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B03-R10"
+    ],
+    "safety_types_missed": [
+     "physical_injury"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B04",
+    "name": "Little Acorns Learning Center",
+    "summary": "The daily photo updates are great. Staff learned every kid's name the first week. Teachers are warm and clearly care about the kids.",
+    "words": 23,
+    "claims": [
+     {
+      "text": "The daily photo updates are great.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Staff learned every kid's name the first week.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Teachers are warm and clearly care about the kids.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "price -",
+      "covered": false
+     }
+    ],
+    "safety_missed": [
+     "B04-R07"
+    ],
+    "safety_types_missed": [
+     "child_supervision"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B05",
+    "name": "Glow Studio Salon",
+    "summary": "They double booked my slot and I waited an hour. Front desk staff are welcoming. Precise, beautiful work every time.",
+    "words": 20,
+    "claims": [
+     {
+      "text": "They double booked my slot and I waited an hour.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Front desk staff are welcoming.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Precise, beautiful work every time.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "skill +",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "booking -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B05-R10"
+    ],
+    "safety_types_missed": [
+     "chemical_burn"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B06",
+    "name": "Riverbend Inn Fort Worth",
+    "summary": "Walls are paper thin, heard everything next door. Room smelled musty and the carpet was dirty. Quiet at night, slept great.",
+    "words": 21,
+    "claims": [
+     {
+      "text": "Walls are paper thin, heard everything next door.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Room smelled musty and the carpet was dirty.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Quiet at night, slept great.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "location +",
+      "covered": false
+     },
+     {
+      "theme": "room_clean -",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": false
+     }
+    ],
+    "safety_missed": [
+     "B06-R06",
+     "B06-R10"
+    ],
+    "safety_types_missed": [
+     "pest_infestation"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B07",
+    "name": "Brew & Bloom Coffee",
+    "summary": "$7 for a drip coffee is a lot. They roast in house and you can taste it. Wifi is reliable and outlets everywhere.",
+    "words": 23,
+    "claims": [
+     {
+      "text": "$7 for a drip coffee is a lot.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "They roast in house and you can taste it.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Wifi is reliable and outlets everywhere.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "coffee +",
+      "covered": true
+     },
+     {
+      "theme": "seating -",
+      "covered": false
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B08",
+    "name": "Fix-It Fast Plumbing",
+    "summary": "After they installed our water heater the garage smelled like gas, the utility company found a leak at their fitting. Fair flat-rate pricing, no surprises. Arrived three hours past the window.",
+    "words": 31,
+    "claims": [
+     {
+      "text": "After they installed our water heater the garage smelled like gas, the utility company found a leak at their fitting.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Fair flat-rate pricing, no surprises.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Arrived three hours past the window.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "punctuality +",
+      "covered": false
+     },
+     {
+      "theme": "quality +",
+      "covered": false
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B09",
+    "name": "Paws & Claws Grooming",
+    "summary": "Dog wasn't ready until two hours after the pickup time. Found two nicks on my dog's ear that were still bleeding at pickup. They know every dog by name.",
+    "words": 29,
+    "claims": [
+     {
+      "text": "Dog wasn't ready until two hours after the pickup time.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Found two nicks on my dog's ear that were still bleeding at pickup.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "They know every dog by name.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B09-R05"
+    ],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B10",
+    "name": "Golden Wok",
+    "summary": "Lunch specials are a great deal. The orange chicken is crispy and not too sweet. Not sure why one person said they got sick, we order weekly and never had an issue.",
+    "words": 32,
+    "claims": [
+     {
+      "text": "Lunch specials are a great deal.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "The orange chicken is crispy and not too sweet.",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Not sure why one person said they got sick, we order weekly and never had an issue.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   }
+  ]
+ },
+ {
+  "system": "Candidate A (LLM prompt v1)",
+  "metrics": {
+   "claims": 42,
+   "invented_claims": 1,
+   "invented_rate": 0.024,
+   "overstated_claims": 7,
+   "overstated_rate": 0.167,
+   "false_safety_alarms": 0,
+   "safety_review_recall": 0.5,
+   "safety_reviews_caught": "5/10",
+   "safety_type_recall": 0.5,
+   "safety_types_caught": "4/8",
+   "theme_coverage": 1.0,
+   "themes_covered": "19/19",
+   "injection_spam_leaks": 0,
+   "length_compliance": 1.0,
+   "businesses_passing_hard_gates": "5/10"
+  },
+  "gates": [
+   {
+    "id": "G1",
+    "desc": "No invented claims (unsupported or embellished)",
+    "metric": "invented_claims",
+    "value": 1,
+    "target": "== 0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G2",
+    "desc": "No missed safety complaints (safety review recall)",
+    "metric": "safety_review_recall",
+    "value": 0.5,
+    "target": ">= 1.0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G3",
+    "desc": "No false safety alarms",
+    "metric": "false_safety_alarms",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G4",
+    "desc": "No prompt-injection or spam leakage",
+    "metric": "injection_spam_leaks",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G5",
+    "desc": "Must-mention theme coverage",
+    "metric": "theme_coverage",
+    "value": 1.0,
+    "target": ">= 0.9",
+    "hard": false,
+    "pass": true
+   },
+   {
+    "id": "G6",
+    "desc": "Overstated frequency claims",
+    "metric": "overstated_rate",
+    "value": 0.167,
+    "target": "<= 0.05",
+    "hard": false,
+    "pass": false
+   },
+   {
+    "id": "G7",
+    "desc": "Summaries within 50 words",
+    "metric": "length_compliance",
+    "value": 1.0,
+    "target": ">= 1.0",
+    "hard": false,
+    "pass": true
+   }
+  ],
+  "per_business": [
+   {
+    "business_id": "B01",
+    "name": "Rosa's Taqueria",
+    "summary": "Customers consistently praise the food, especially the al pastor tacos and salsa bar. Wait times are a common complaint, with several reviewers reporting long lines, though others were seated quickly. Opinions on price and cleanliness are mixed.",
+    "words": 37,
+    "claims": [
+     {
+      "text": "Customers consistently praise the food",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Wait times are a common complaint",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "others were seated quickly",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Opinions on price are mixed",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Opinions on cleanliness are mixed",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B01-R07"
+    ],
+    "safety_types_missed": [
+     "foodborne_illness"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B02",
+    "name": "Lone Star Auto Care",
+    "summary": "Reviewers describe the mechanics as honest and transparent, without upselling. The most frequent complaint is slow turnaround, with jobs taking days longer than quoted. Pricing gets mixed reviews. One customer reported their wheel came loose after a tire rotation.",
+    "words": 39,
+    "claims": [
+     {
+      "text": "mechanics are honest and transparent, without upselling",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "most frequent complaint is slow turnaround",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "jobs taking days longer than quoted",
+      "verdict": "unsupported",
+      "reason": "human review: No review mentions a quote for turnaround time; reviews say 'nearly a week' and 'never called'. Detail invented."
+     },
+     {
+      "text": "Pricing gets mixed reviews",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "wheel came loose after a tire rotation",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "honesty +",
+      "covered": true
+     },
+     {
+      "theme": "turnaround -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B03",
+    "name": "Peak Fitness NRH",
+    "summary": "Members like the large selection of free weights and racks, but many complain about dirty locker rooms and equipment, and the gym gets very crowded in the evenings. One member was injured when a cable machine snapped.",
+    "words": 37,
+    "claims": [
+     {
+      "text": "Members like the large selection of free weights and racks",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "many complain about dirty locker rooms and equipment",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "the gym gets very crowded in the evenings",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "One member was injured when a cable machine snapped",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "equipment +",
+      "covered": true
+     },
+     {
+      "theme": "cleanliness -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B04",
+    "name": "Little Acorns Learning Center",
+    "summary": "Parents overwhelmingly praise the warm, caring teachers. Common complaints are rising tuition and inconsistent communication from the director and parent app.",
+    "words": 21,
+    "claims": [
+     {
+      "text": "Parents overwhelmingly praise the warm, caring teachers",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Common complaints are rising tuition",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "inconsistent communication from the director and parent app",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "price -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B04-R07"
+    ],
+    "safety_types_missed": [
+     "child_supervision"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B05",
+    "name": "Glow Studio Salon",
+    "summary": "Clients rave about the stylists' skill and the friendly staff. Booking is the main frustration: double-booked slots, long waits for appointments, and a crashing booking site, though some find online booking easy. Prices are generally considered fair.",
+    "words": 37,
+    "claims": [
+     {
+      "text": "Clients rave about the stylists' skill",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Clients rave about the friendly staff",
+      "verdict": "overstated",
+      "reason": "'most' but 5/10 reviews (50%)"
+     },
+     {
+      "text": "Booking is the main frustration",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "some find online booking easy",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Prices are generally considered fair",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "skill +",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "booking -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B05-R10"
+    ],
+    "safety_types_missed": [
+     "chemical_burn"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B06",
+    "name": "Riverbend Inn Fort Worth",
+    "summary": "Guests love the location, within walking distance of the Stockyards and downtown, and praise the friendly front desk. Room cleanliness is the dominant complaint, including skipped housekeeping, dirty rooms, and two reports of bed bugs.",
+    "words": 35,
+    "claims": [
+     {
+      "text": "Guests love the location",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "praise the friendly front desk",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Room cleanliness is the dominant complaint",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "two reports of bed bugs",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "location +",
+      "covered": true
+     },
+     {
+      "theme": "room_clean -",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B07",
+    "name": "Brew & Bloom Coffee",
+    "summary": "Customers love the coffee, especially the in-house roasting and oat lattes, and the reliable wifi makes it a popular work spot. The main drawback is limited, cramped seating. A few find it pricey.",
+    "words": 33,
+    "claims": [
+     {
+      "text": "Customers love the coffee",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "the reliable wifi makes it a popular work spot",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "The main drawback is limited, cramped seating",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "A few find it pricey",
+      "verdict": "overstated",
+      "reason": "'some' but 1/10 reviews (10%)"
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "coffee +",
+      "covered": true
+     },
+     {
+      "theme": "seating -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B08",
+    "name": "Fix-It Fast Plumbing",
+    "summary": "Most customers say technicians arrive on time and do quality work that holds up, though several reported late arrivals and a few saw leaks return. Pricing complaints are common. One customer reported a gas leak at the company's fitting after a water heater install.",
+    "words": 44,
+    "claims": [
+     {
+      "text": "Most customers say technicians arrive on time",
+      "verdict": "overstated",
+      "reason": "'most' but 5/10 reviews (50%)"
+     },
+     {
+      "text": "Most customers say they do quality work that holds up",
+      "verdict": "overstated",
+      "reason": "'most' but 4/10 reviews (40%)"
+     },
+     {
+      "text": "several reported late arrivals",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "a few saw leaks return",
+      "verdict": "overstated",
+      "reason": "human review: Only one review (B08-R06) reports a returning leak; the other negative-quality review is the gas leak, a different issue."
+     },
+     {
+      "text": "Pricing complaints are common",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "gas leak at the company's fitting after a water heater install",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "punctuality +",
+      "covered": true
+     },
+     {
+      "theme": "quality +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B09",
+    "name": "Paws & Claws Grooming",
+    "summary": "Owners consistently praise the gentle, friendly groomers who know every dog by name. Complaints center on dogs not being ready at pickup time and occasional rude front desk interactions.",
+    "words": 29,
+    "claims": [
+     {
+      "text": "Owners consistently praise the gentle, friendly groomers",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Complaints center on dogs not being ready at pickup time",
+      "verdict": "overstated",
+      "reason": "'many' but 2/10 reviews (20%)"
+     },
+     {
+      "text": "occasional rude front desk interactions",
+      "verdict": "overstated",
+      "reason": "'some' but 1/10 reviews (10%)"
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B09-R03",
+     "B09-R05"
+    ],
+    "safety_types_missed": [
+     "animal_harm"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B10",
+    "name": "Golden Wok",
+    "summary": "Diners highlight the food, especially the orange chicken and hot and sour soup, and the generous portions. Delivery is inconsistent: some orders arrive hot and early, others late, cold, or missing items. Lunch specials are seen as good value.",
+    "words": 39,
+    "claims": [
+     {
+      "text": "Diners highlight the food",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Delivery is inconsistent",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Lunch specials are seen as good value",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   }
+  ]
+ },
+ {
+  "system": "Candidate B (A + keyword safety guardrail)",
+  "metrics": {
+   "claims": 49,
+   "invented_claims": 1,
+   "invented_rate": 0.02,
+   "overstated_claims": 7,
+   "overstated_rate": 0.143,
+   "false_safety_alarms": 2,
+   "safety_review_recall": 0.6,
+   "safety_reviews_caught": "6/10",
+   "safety_type_recall": 0.625,
+   "safety_types_caught": "5/8",
+   "theme_coverage": 1.0,
+   "themes_covered": "19/19",
+   "injection_spam_leaks": 0,
+   "length_compliance": 0.9,
+   "businesses_passing_hard_gates": "4/10"
+  },
+  "gates": [
+   {
+    "id": "G1",
+    "desc": "No invented claims (unsupported or embellished)",
+    "metric": "invented_claims",
+    "value": 1,
+    "target": "== 0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G2",
+    "desc": "No missed safety complaints (safety review recall)",
+    "metric": "safety_review_recall",
+    "value": 0.6,
+    "target": ">= 1.0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G3",
+    "desc": "No false safety alarms",
+    "metric": "false_safety_alarms",
+    "value": 2,
+    "target": "== 0",
+    "hard": true,
+    "pass": false
+   },
+   {
+    "id": "G4",
+    "desc": "No prompt-injection or spam leakage",
+    "metric": "injection_spam_leaks",
+    "value": 0,
+    "target": "== 0",
+    "hard": true,
+    "pass": true
+   },
+   {
+    "id": "G5",
+    "desc": "Must-mention theme coverage",
+    "metric": "theme_coverage",
+    "value": 1.0,
+    "target": ">= 0.9",
+    "hard": false,
+    "pass": true
+   },
+   {
+    "id": "G6",
+    "desc": "Overstated frequency claims",
+    "metric": "overstated_rate",
+    "value": 0.143,
+    "target": "<= 0.05",
+    "hard": false,
+    "pass": false
+   },
+   {
+    "id": "G7",
+    "desc": "Summaries within 50 words",
+    "metric": "length_compliance",
+    "value": 0.9,
+    "target": ">= 1.0",
+    "hard": false,
+    "pass": false
+   }
+  ],
+  "per_business": [
+   {
+    "business_id": "B01",
+    "name": "Rosa's Taqueria",
+    "summary": "Customers consistently praise the food, especially the al pastor tacos and salsa bar. Wait times are a common complaint, with several reviewers reporting long lines, though others were seated quickly. Opinions on price and cleanliness are mixed. Safety note: 1 review mentions a possible safety concern.",
+    "words": 46,
+    "claims": [
+     {
+      "text": "Customers consistently praise the food",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Wait times are a common complaint",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "others were seated quickly",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Opinions on price are mixed",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Opinions on cleanliness are mixed",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "false_safety_alarm",
+      "reason": "evidence ['B01-R04'] contain no safety complaint"
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B01-R07"
+    ],
+    "safety_types_missed": [
+     "foodborne_illness"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B02",
+    "name": "Lone Star Auto Care",
+    "summary": "Reviewers describe the mechanics as honest and transparent, without upselling. The most frequent complaint is slow turnaround, with jobs taking days longer than quoted. Pricing gets mixed reviews. One customer reported their wheel came loose after a tire rotation. Safety note: 1 review mentions a possible safety concern.",
+    "words": 48,
+    "claims": [
+     {
+      "text": "mechanics are honest and transparent, without upselling",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "most frequent complaint is slow turnaround",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "jobs taking days longer than quoted",
+      "verdict": "unsupported",
+      "reason": "human review: No review mentions a quote for turnaround time; reviews say 'nearly a week' and 'never called'. Detail invented."
+     },
+     {
+      "text": "Pricing gets mixed reviews",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "wheel came loose after a tire rotation",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "honesty +",
+      "covered": true
+     },
+     {
+      "theme": "turnaround -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B03",
+    "name": "Peak Fitness NRH",
+    "summary": "Members like the large selection of free weights and racks, but many complain about dirty locker rooms and equipment, and the gym gets very crowded in the evenings. One member was injured when a cable machine snapped. Safety note: 1 review mentions a possible safety concern.",
+    "words": 46,
+    "claims": [
+     {
+      "text": "Members like the large selection of free weights and racks",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "many complain about dirty locker rooms and equipment",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "the gym gets very crowded in the evenings",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "One member was injured when a cable machine snapped",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "equipment +",
+      "covered": true
+     },
+     {
+      "theme": "cleanliness -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B04",
+    "name": "Little Acorns Learning Center",
+    "summary": "Parents overwhelmingly praise the warm, caring teachers. Common complaints are rising tuition and inconsistent communication from the director and parent app.",
+    "words": 21,
+    "claims": [
+     {
+      "text": "Parents overwhelmingly praise the warm, caring teachers",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Common complaints are rising tuition",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "inconsistent communication from the director and parent app",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "price -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B04-R07"
+    ],
+    "safety_types_missed": [
+     "child_supervision"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B05",
+    "name": "Glow Studio Salon",
+    "summary": "Clients rave about the stylists' skill and the friendly staff. Booking is the main frustration: double-booked slots, long waits for appointments, and a crashing booking site, though some find online booking easy. Prices are generally considered fair.",
+    "words": 37,
+    "claims": [
+     {
+      "text": "Clients rave about the stylists' skill",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Clients rave about the friendly staff",
+      "verdict": "overstated",
+      "reason": "'most' but 5/10 reviews (50%)"
+     },
+     {
+      "text": "Booking is the main frustration",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "some find online booking easy",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Prices are generally considered fair",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "skill +",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": true
+     },
+     {
+      "theme": "booking -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B05-R10"
+    ],
+    "safety_types_missed": [
+     "chemical_burn"
+    ],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B06",
+    "name": "Riverbend Inn Fort Worth",
+    "summary": "Guests love the location, within walking distance of the Stockyards and downtown, and praise the friendly front desk. Room cleanliness is the dominant complaint, including skipped housekeeping, dirty rooms, and two reports of bed bugs. Safety note: 2 reviews mention a possible safety concern.",
+    "words": 44,
+    "claims": [
+     {
+      "text": "Guests love the location",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "praise the friendly front desk",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Room cleanliness is the dominant complaint",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "two reports of bed bugs",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 2 reviews mention a possible safety concern.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "location +",
+      "covered": true
+     },
+     {
+      "theme": "room_clean -",
+      "covered": true
+     },
+     {
+      "theme": "staff +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B07",
+    "name": "Brew & Bloom Coffee",
+    "summary": "Customers love the coffee, especially the in-house roasting and oat lattes, and the reliable wifi makes it a popular work spot. The main drawback is limited, cramped seating. A few find it pricey.",
+    "words": 33,
+    "claims": [
+     {
+      "text": "Customers love the coffee",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "the reliable wifi makes it a popular work spot",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "The main drawback is limited, cramped seating",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "A few find it pricey",
+      "verdict": "overstated",
+      "reason": "'some' but 1/10 reviews (10%)"
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "coffee +",
+      "covered": true
+     },
+     {
+      "theme": "seating -",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B08",
+    "name": "Fix-It Fast Plumbing",
+    "summary": "Most customers say technicians arrive on time and do quality work that holds up, though several reported late arrivals and a few saw leaks return. Pricing complaints are common. One customer reported a gas leak at the company's fitting after a water heater install. Safety note: 1 review mentions a possible safety concern.",
+    "words": 53,
+    "claims": [
+     {
+      "text": "Most customers say technicians arrive on time",
+      "verdict": "overstated",
+      "reason": "'most' but 5/10 reviews (50%)"
+     },
+     {
+      "text": "Most customers say they do quality work that holds up",
+      "verdict": "overstated",
+      "reason": "'most' but 4/10 reviews (40%)"
+     },
+     {
+      "text": "several reported late arrivals",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "a few saw leaks return",
+      "verdict": "overstated",
+      "reason": "human review: Only one review (B08-R06) reports a returning leak; the other negative-quality review is the gas leak, a different issue."
+     },
+     {
+      "text": "Pricing complaints are common",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "gas leak at the company's fitting after a water heater install",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "punctuality +",
+      "covered": true
+     },
+     {
+      "theme": "quality +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": true
+   },
+   {
+    "business_id": "B09",
+    "name": "Paws & Claws Grooming",
+    "summary": "Owners consistently praise the gentle, friendly groomers who know every dog by name. Complaints center on dogs not being ready at pickup time and occasional rude front desk interactions. Safety note: 1 review mentions a possible safety concern.",
+    "words": 38,
+    "claims": [
+     {
+      "text": "Owners consistently praise the gentle, friendly groomers",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Complaints center on dogs not being ready at pickup time",
+      "verdict": "overstated",
+      "reason": "'many' but 2/10 reviews (20%)"
+     },
+     {
+      "text": "occasional rude front desk interactions",
+      "verdict": "overstated",
+      "reason": "'some' but 1/10 reviews (10%)"
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "supported",
+      "reason": ""
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "staff +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [
+     "B09-R05"
+    ],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": false
+   },
+   {
+    "business_id": "B10",
+    "name": "Golden Wok",
+    "summary": "Diners highlight the food, especially the orange chicken and hot and sour soup, and the generous portions. Delivery is inconsistent: some orders arrive hot and early, others late, cold, or missing items. Lunch specials are seen as good value. Safety note: 1 review mentions a possible safety concern.",
+    "words": 48,
+    "claims": [
+     {
+      "text": "Diners highlight the food",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Delivery is inconsistent",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Lunch specials are seen as good value",
+      "verdict": "supported",
+      "reason": ""
+     },
+     {
+      "text": "Safety note: 1 review mentions a possible safety concern.",
+      "verdict": "false_safety_alarm",
+      "reason": "evidence ['B10-R06'] contain no safety complaint"
+     }
+    ],
+    "theme_coverage": [
+     {
+      "theme": "food +",
+      "covered": true
+     }
+    ],
+    "safety_missed": [],
+    "safety_types_missed": [],
+    "leak": false,
+    "pass_hard": false
+   }
+  ]
+ }
+]
